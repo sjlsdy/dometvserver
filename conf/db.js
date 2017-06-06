@@ -3,7 +3,7 @@ module.exports = {
 		host: '115.171.59.0',
 		user: 'root',
 		password: 'aeu518940',
-		database: 'testnode',
+		database: 'tvdata',
 		port: 3306
 	}
 }
