@@ -12,8 +12,12 @@ router.get('/silder', function(req, res, next) {
 	userDao.silder(req, res, next);
 });
 
-router.get('/sss', function(req, res, next) {
-	userDao.add(req, res, next);
+router.get('/addSilder', function(req, res, next) {
+	userDao.addSilder(req, res, next);
+})
+
+router.get('/delSilder', function(req, res, next) {
+	userDao.delSilder(req, res, next);
 })
 
 module.exports = router;
