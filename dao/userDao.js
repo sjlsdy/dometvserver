@@ -22,11 +22,16 @@ module.exports = {
 	login: function(req, res, next) {
 		pool.getConnection(function(err, connection) {
 			var param = req.query || req.params;
-			connection.query($sql.queryUser,[param.username, param.password], function(err, result) {
-				if(result) {
+			connection.query($sql.queryUser, [param.username, param.password], function(err, result) {
+				if(result.length > 0) {
 					result = {
-						code: 200,
+						code: 0,
 						msg: '登录成功'
+					};
+				} else {
+					result = {
+						code: 1,
+						msg: '没有此用户或密码错误'
 					};
 				}
 				jsonWrite(res, result);
