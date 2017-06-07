@@ -8,6 +8,10 @@ router.get('/', function(req, res, next) {
 	res.send('respond with a resource');
 });
 
+router.get('/login', function(req, res, next) {
+	userDao.login(req, res, next);
+})
+
 router.get('/silder', function(req, res, next) {
 	userDao.silder(req, res, next);
 });

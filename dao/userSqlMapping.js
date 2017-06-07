@@ -3,7 +3,8 @@ var user = {
 	update: 'update user set name=?, age=? where id=?',
 	delete: 'delete from silder where id=?',
 	queryById: 'select * from user where id=?',
-	queryAll: 'select * from silder'
+	queryAll: 'select * from silder',
+	queryUser: 'select * from user where username=? and password=?'
 };
 
 module.exports = user;
